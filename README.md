@@ -2,7 +2,7 @@
 
 **TN Tray** is a Thunderbird extension for Windows that gives you full control over minimize/close-to-tray behavior, with a custom tray icon, unread badge, and its own right-click menu — something Thunderbird's native tray integration has never fully provided.
 
-Built as an independent reimplementation after evaluating [Lachcim's close-to-tray](https://github.com/Lachcim/thunderbird-close-to-tray), which inspired the original idea but does not solve the problems this extension focuses on (see "Why not just use Thunderbird's built-in tray support?" below).
+There are other tray extensions for Thunderbird out there, but none of them quite matched what felt missing, or worked the way it seemed like they should. TN Tray is an independent take on the problem, built from scratch.
 
 This repository hosts public releases, documentation, support, issues, and discussions. The extension is distributed as a packaged `.xpi` file through GitHub Releases.
 
