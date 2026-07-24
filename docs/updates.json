@@ -1,0 +1,18 @@
+{
+  "addons": {
+    "tn-tray@tncode.io": {
+      "updates": [
+        {
+          "version": "1.0.0",
+          "update_link": "https://github.com/thiagonaalmeida/tn-tray/releases/download/v1.0.0/tn-tray-1.0.0.xpi",
+          "update_hash": "sha256:ef4fd89800dd06ee9018a7ed37ad4f117d7903ebacced27a700cc98e91f7c4fb",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "115.0"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
