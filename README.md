@@ -3,8 +3,7 @@
 **TN Tray** is a Thunderbird extension for Windows that gives you full control over minimize/close-to-tray behavior, with a custom tray icon, unread badge, and its own right-click menu — something Thunderbird's native tray integration has never fully provided.
 
 There are other tray extensions for Thunderbird out there, but none of them quite matched what felt missing, or worked the way it seemed like they should. TN Tray is an independent take on the problem, built from scratch.
-
-This repository hosts public releases, documentation, support, issues, and discussions. The extension is distributed as a packaged `.xpi` file through GitHub Releases.
+> This repository hosts public releases, documentation, support, issues, and discussions. The extension is distributed as a packaged `.xpi` file through GitHub Releases.
 
 ## Features
 
@@ -18,12 +17,12 @@ This repository hosts public releases, documentation, support, issues, and discu
 
 ## Compatibility
 
-- Thunderbird **115** and later.
+- Thunderbird **152.*** and **153.***.
 - Windows only.
 
 ## Why not just use Thunderbird's built-in tray support?
 
-Thunderbird has long had a legacy `mail.minimizeToTray` preference, and starting with **Thunderbird 154** it gains a proper native "close to tray" / "start in tray" feature. However, the native tray icon still only exposes a single **Exit** action in its context menu, with no restore, compose, or unread-count affordances — a long-standing limitation ([Bugzilla #1918035](https://bugzilla.mozilla.org/show_bug.cgi?id=1918035)). TN Tray exists to fill that gap, and is designed to coexist with the native feature rather than fight it.
+Thunderbird has long had a legacy `mail.minimizeToTray` preference, and starting with **Thunderbird 154** it gains a proper native "close to tray" / "start in tray" feature. TN Tray has already been reviewed against Thunderbird 154's implementation and is designed to remain fully compatible with it, without conflicting with the native feature, while continuing to offer its own custom tray icon, full right-click menu, and unread badge.
 
 ## Installation
 

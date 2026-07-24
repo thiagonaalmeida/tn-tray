@@ -11,12 +11,12 @@ Download the attached XPI file:
 ## SHA256
 
 ```
-ef4fd89800dd06ee9018a7ed37ad4f117d7903ebacced27a700cc98e91f7c4fb
+4752e7cb3d06ff17a745de3d0b7f4115b4a15862fefad03421e74c3c255c6760
 ```
 
 ## Compatibility
 
-- Thunderbird 115 and later (Windows only).
+- Thunderbird 152.* and 153.* (Windows only).
 
 ## Highlights
 
