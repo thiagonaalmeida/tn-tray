@@ -6,7 +6,7 @@ It adds a custom system tray icon for Thunderbird on Windows, with close-to-tray
 
 ## Which Thunderbird version is supported?
 
-Thunderbird 115 and later. Windows only.
+Thunderbird 152.* and 153.*. Windows only.
 
 ## Does it replace Thunderbird's native tray icon?
 
@@ -14,7 +14,7 @@ Not by default — both can coexist. An option in Preferences lets you suppress 
 
 ## Does it conflict with Thunderbird 154's native close-to-tray feature?
 
-No. TN Tray is designed to coexist with the native feature rather than fight it. Thunderbird's native tray icon still only exposes a single "Exit" action, so TN Tray continues to add value through its full menu and unread badge.
+No. TN Tray has already been reviewed against Thunderbird 154's implementation and is designed to remain fully compatible with it, continuing to offer its own custom tray icon, full right-click menu, and unread badge alongside the native feature.
 
 ## Why is it distributed on GitHub instead of addons.thunderbird.net?
 
