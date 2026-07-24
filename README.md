@@ -4,6 +4,8 @@
 
 Built as an independent reimplementation after evaluating [Lachcim's close-to-tray](https://github.com/Lachcim/thunderbird-close-to-tray), which inspired the original idea but does not solve the problems this extension focuses on (see "Why not just use Thunderbird's built-in tray support?" below).
 
+This repository hosts public releases, documentation, support, issues, and discussions. The extension is distributed as a packaged `.xpi` file through GitHub Releases.
+
 ## Features
 
 - Close to tray: clicking the window's X sends Thunderbird to the system tray instead of quitting.
