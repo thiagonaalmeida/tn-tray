@@ -71,3 +71,4 @@ First public release.
 - Removed the `messagesRead` permission — it existed only for a `messages.onNewMailReceived` listener that never actually read any message data, just triggered a badge refresh. `folders.onFolderInfoChanged` (which only needs `accountsRead`, already granted) covers the same new-mail case.
 - Corrected the FAQ's answer on whether TN Tray replaces the native tray icon — it does, by default (the README and options page already said so; the FAQ was the one place that hadn't been updated).
 - Documented the extension's default settings (own tray icon, Windows auto-start, and start-minimized all on; diagnostic logging off) in the README, and added a note that disabling Windows auto-start or TN Tray in one profile can remove the shared registry entry another profile relies on.
+- Tidied up a couple of `background.js` comments that read like patch notes (referencing the just-removed `onNewMailReceived` listener) instead of describing the current code.
