@@ -11,7 +11,7 @@ Download the attached XPI file:
 ## SHA256
 
 ```
-de618c0d3c959f2dbf392078e74194d31f8c580ea52b2baa5271fc2737c93d20
+2dcfc2a4d079028d3cf132a06e0bd7a65d90fbf1fe20295156ac440025600eea
 ```
 
 ## Compatibility

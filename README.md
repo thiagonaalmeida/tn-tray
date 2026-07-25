@@ -77,7 +77,7 @@ TN Tray collects no data and its own code makes no network requests. The one exc
 | `background.js` | WebExtension orchestration: wires up options, unread counting, menu commands |
 | `experiments/trayIcon/` | Privileged API: tray icon/menu via `Shell_NotifyIconW`, window hide/show/transparency, close-to-tray hijack |
 | `experiments/trayIcon/poll-worker.js` | `ChromeWorker` thread that polls for tray icon clicks/hover, avoiding native window-procedure callbacks |
-| `experiments/launchMode/` | Detects the `-trayboot` launch flag and manages the Windows `Run` registry auto-start entry |
+| `experiments/launchMode/` | Detects the `-MapiStartup -url` launch flags and manages the Windows `Run` registry auto-start entry |
 | `options/` | Settings UI |
 
 ## Support
