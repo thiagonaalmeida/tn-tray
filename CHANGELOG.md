@@ -23,7 +23,7 @@ First public release.
 ### Lifecycle and reliability hardening
 
 - Invalidates the startup cache on shutdown when it isn't a full app quit (update, disable, reinstall, dev reload), so a future automatic GitHub update can't end up running stale cached code from the previous version.
-- The `win.focus()` interception used to fix the reactivation white-flash is now fully undone on shutdown (restores the original `focus`, removes the `activate` listener), tracked per window instead of with a single global flag — a second main window opened in the same session is now protected too.
+- The `win.focus()` interception used to fix the reactivation white-flash is now fully undone on shutdown (restores the original `focus`, removes the `activate` listener), tracked per window instead of with a single global flag — this lays groundwork for future multi-window support, though 1.0.0 still only manages the initial main window (see Known limitations).
 - The tray icon's registration (`Shell_NotifyIconW(NIM_ADD)`) now has its return value checked instead of being assumed to succeed; on the rare case it fails during boot, the window is restored instead of being left hidden with no working icon to bring it back.
 - "Exit" is now handled natively, synchronously, in a single place, instead of also being routed through the background script — removes a redundant second `destroyIcon()`/quit call.
 - The `resource://tntray-worker/` alias registered on startup is unregistered on shutdown, instead of staying bound to the previous version after an update.
