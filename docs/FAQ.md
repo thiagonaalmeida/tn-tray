@@ -10,7 +10,7 @@ Thunderbird 152.* and 153.*. Windows only.
 
 ## Does it replace Thunderbird's native tray icon?
 
-Not by default — both can coexist. An option in Preferences lets you suppress Thunderbird's native tray icon and use only TN Tray's.
+Yes, by default. TN Tray suppresses Thunderbird's native tray icon (which only ever exposes "Exit") and uses only its own. You can disable this in Preferences if you'd rather have both icons coexist.
 
 ## Does it conflict with Thunderbird 154's native close-to-tray feature?
 
