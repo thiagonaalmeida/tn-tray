@@ -23,7 +23,7 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 ## Known limitations
 
 - TN Tray currently manages the main Thunderbird window opened at startup. Additional 3-pane windows opened during the same session aren't independently managed by the close-to-tray behavior.
-- Windows auto-start uses a single registry entry per Windows user. Multiple Thunderbird installations or profiles under the same user may overwrite each other's entry.
+- Windows auto-start uses a single registry entry per Windows user. Multiple Thunderbird installations or profiles under the same user may overwrite each other's entry — disabling Windows auto-start, or disabling TN Tray, in one profile can also remove the shared entry that another profile or installation relies on.
 
 ## Why not just use Thunderbird's built-in tray support?
 
@@ -56,6 +56,15 @@ Open the extension's preferences (Add-ons and Themes → TN Tray → Preferences
 - Start Thunderbird with Windows
 - Start minimized in the tray on boot
 - Enable diagnostic logging (writes to `%TEMP%\tntray-debug.log`, off by default), with a "Show log file" button to open its location directly in Explorer
+
+### Default settings
+
+- Use only TN Tray's tray icon: **enabled**
+- Start Thunderbird with Windows: **enabled**
+- Start minimized in the tray on boot: **enabled**
+- Diagnostic logging: **disabled**
+
+Installing TN Tray immediately suppresses Thunderbird's native tray icon and adds an entry to the Windows `Run` registry key for the current user — both can be turned off in Preferences right after installing, if that's not what you want.
 
 ## Privacy
 
