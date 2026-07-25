@@ -14,7 +14,7 @@ Not by default — both can coexist. An option in Preferences lets you suppress 
 
 ## Does it conflict with Thunderbird 154's native close-to-tray feature?
 
-No. TN Tray has already been reviewed against Thunderbird 154's implementation and is designed to remain fully compatible with it, continuing to offer its own custom tray icon, full right-click menu, and unread badge alongside the native feature.
+No conflict is expected. TN Tray has already been reviewed in detail against Thunderbird 154's implementation, and full compatibility is the top priority for the next release — the current 1.0.0 release officially supports Thunderbird 152 and 153. TN Tray is designed to keep offering its own custom tray icon, full right-click menu, and unread badge alongside the native feature.
 
 ## Why is it distributed on GitHub instead of addons.thunderbird.net?
 
@@ -22,7 +22,7 @@ addons.thunderbird.net is currently not accepting new add-ons that use Experimen
 
 ## Does TN Tray collect any data?
 
-No. It makes no network requests and sends nothing outside your machine. Diagnostic logging, when explicitly enabled, only writes to a local temp file. See [PRIVACY.md](../PRIVACY.md) for details.
+No. TN Tray's own code makes no network requests. The one exception is Thunderbird's standard add-on update check, which periodically contacts the extension's self-hosted update manifest on GitHub Pages — the same mechanism any self-hosted add-on uses. Diagnostic logging, when explicitly enabled, only writes to a local temp file. See [PRIVACY.md](../PRIVACY.md) for details.
 
 ## Where should I report problems?
 
