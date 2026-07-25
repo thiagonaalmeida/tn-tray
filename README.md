@@ -20,9 +20,14 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 - Thunderbird **152.*** and **153.***.
 - Windows only.
 
+## Known limitations
+
+- TN Tray currently manages the main Thunderbird window opened at startup. Additional 3-pane windows opened during the same session aren't independently managed by the close-to-tray behavior.
+- Windows auto-start uses a single registry entry per Windows user. Multiple Thunderbird installations or profiles under the same user may overwrite each other's entry.
+
 ## Why not just use Thunderbird's built-in tray support?
 
-Thunderbird has long had a legacy `mail.minimizeToTray` preference, and starting with **Thunderbird 154** it gains a proper native "close to tray" / "start in tray" feature. TN Tray has already been reviewed against Thunderbird 154's implementation and is designed to remain fully compatible with it, without conflicting with the native feature, while continuing to offer its own custom tray icon, full right-click menu, and unread badge.
+Thunderbird has long had a legacy `mail.minimizeToTray` preference, and starting with **Thunderbird 154** it gains a proper native "close to tray" / "start in tray" feature. TN Tray has already been reviewed in detail against that implementation, and full compatibility is the top priority for the next release. The current 1.0.0 release officially supports Thunderbird 152 and 153.
 
 ## Installation
 
@@ -54,7 +59,7 @@ Open the extension's preferences (Add-ons and Themes → TN Tray → Preferences
 
 ## Privacy
 
-TN Tray collects no data, makes no network requests, and sends nothing outside your machine. Diagnostic logging, when explicitly enabled by the user, only writes to a local temp file for troubleshooting and is never transmitted anywhere. See [PRIVACY.md](PRIVACY.md) for details.
+TN Tray collects no data and its own code makes no network requests. The one exception is Thunderbird's standard add-on update check, which periodically contacts the extension's self-hosted update manifest on GitHub Pages — the same mechanism any self-hosted add-on uses, with no tracking or identifiers added by TN Tray. Diagnostic logging, when explicitly enabled by the user, only writes to a local temp file for troubleshooting and is never transmitted anywhere. See [PRIVACY.md](PRIVACY.md) for details.
 
 ## Technical overview
 

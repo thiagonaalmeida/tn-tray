@@ -1,6 +1,8 @@
 # Privacy Policy — TN Tray
 
-TN Tray does not collect, store, or transmit any personal data, usage data, or telemetry of any kind. It does not make network requests.
+TN Tray does not collect, store, or transmit any personal data, usage data, or telemetry of any kind. The extension's own code makes no network requests.
+
+The one exception is outside the extension's own code: Thunderbird itself periodically checks the update manifest declared in the extension's `update_url` (hosted on GitHub Pages) to see if a newer version is available, the same mechanism used by any self-hosted add-on. This check only exposes standard request metadata (e.g. IP address, as with any HTTP request) to GitHub's servers, covered by [GitHub's own privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) — TN Tray does not add any tracking, analytics, or identifiers to it.
 
 The extension reads only what it needs to operate locally on your computer:
 
