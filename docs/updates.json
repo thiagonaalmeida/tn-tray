@@ -5,7 +5,7 @@
         {
           "version": "1.0.0",
           "update_link": "https://github.com/thiagonaalmeida/tn-tray/releases/download/v1.0.0/tn-tray-1.0.0.xpi",
-          "update_hash": "sha256:de618c0d3c959f2dbf392078e74194d31f8c580ea52b2baa5271fc2737c93d20",
+          "update_hash": "sha256:2dcfc2a4d079028d3cf132a06e0bd7a65d90fbf1fe20295156ac440025600eea",
           "applications": {
             "gecko": {
               "strict_min_version": "152.0",
