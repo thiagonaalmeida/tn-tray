@@ -12,6 +12,17 @@
               "strict_max_version": "153.*"
             }
           }
+        },
+        {
+          "version": "1.0.1",
+          "update_link": "https://github.com/thiagonaalmeida/tn-tray/releases/download/v1.0.1/tn-tray-1.0.1.xpi",
+          "update_hash": "sha256:ae0528b0f63724ca5b57ef59bf47cdd837c296aac50dc90bb85c80bda18ec58d",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "152.0",
+              "strict_max_version": "154.*"
+            }
+          }
         }
       ]
     }
