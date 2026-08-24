@@ -17,7 +17,7 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 
 ## Compatibility
 
-- Thunderbird **152.*** and **153.***.
+- Thunderbird **152.*** through **154.***.
 - Windows only.
 
 ## Known limitations
@@ -27,7 +27,7 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 
 ## Why not just use Thunderbird's built-in tray support?
 
-Thunderbird has long had a legacy `mail.minimizeToTray` preference, and starting with **Thunderbird 154** it gains a proper native "close to tray" / "start in tray" feature. TN Tray has already been reviewed in detail against that implementation, and full compatibility is the top priority for the next release. The current 1.0.0 release officially supports Thunderbird 152 and 153.
+Thunderbird had a legacy `mail.minimizeToTray` preference, and as of **Thunderbird 154** it has a proper native "close to tray" / "start in tray" feature — but the native tray icon's menu still only offers "Exit", with no restore, compose, check-for-mail, or unread badge. TN Tray keeps covering that gap: on Thunderbird 154+, when TN Tray's own tray icon is enabled (the default), it also disables the native close-to-tray/start-in-tray preferences so the two don't both react to the same close event — you get TN Tray's full menu and badge instead. You can turn this off in Preferences if you'd rather use Thunderbird's native behavior alongside, or instead of, TN Tray's.
 
 ## Installation
 

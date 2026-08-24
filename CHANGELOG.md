@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1
+
+- Thunderbird 154 compatibility: raised `strict_max_version` to `154.*`.
+- On Thunderbird 154+, TN Tray now also manages the new native `mail.closeToTray` and `mail.closeToTray.startInTray` preferences the same way it already managed the legacy tray icon prefs — backing up the original values and disabling them while TN Tray's own tray icon is enabled (the default), so the native close-to-tray feature and TN Tray don't both react to the same window-close event. Restored automatically on real uninstall/disable, gated to only touch these preferences on Thunderbird 154 and later (`Services.vc.compare(Services.appinfo.version, "154.0") >= 0`), since they don't exist on older versions.
+- Fixed a stale SHA-256 in the GitHub-hosted `docs/updates.json` update manifest that didn't match the actual published 1.0.0 `.xpi` — Thunderbird's own automatic update check would have failed the hash verification for anyone relying on it.
+- Updated README, FAQ, and the "use only this extension's tray icon" option's description (English and Portuguese) to reflect actual coexistence behavior with Thunderbird 154's native tray feature now that it has shipped, instead of describing it as upcoming.
+
 ## 1.0.0
 
 First public release.
