@@ -17,7 +17,7 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 
 ## Compatibility
 
-- Thunderbird **152.*** through **154.***.
+- Thunderbird **152.*** through **155.***.
 - Windows only.
 
 ## Known limitations
