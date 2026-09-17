@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Thunderbird 156 compatibility: raised `strict_max_version` to `156.*`. Source-level review of the Thunderbird 156.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs`, the `-MapiStartup`/`-url` launch-flag handling, and the Windows-specific preference list (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) are all unchanged from 154/155. The release notes list a fix for Thunderbird's own native tray icon (Enter key not restoring the window), but that's Thunderbird's own tray icon, which TN Tray suppresses in favor of its own — not something TN Tray depends on. No code changes were needed.
+
 ## 1.0.2
 
 - Thunderbird 155 compatibility: raised `strict_max_version` to `155.*`. Source-level review of the Thunderbird 155.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs`, the `-MapiStartup`/`-url` launch-flag handling, and the Windows-specific preference list (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) are all unchanged from 154. No code changes were needed.
