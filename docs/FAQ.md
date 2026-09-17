@@ -6,7 +6,7 @@ It adds a custom system tray icon for Thunderbird on Windows, with close-to-tray
 
 ## Which Thunderbird version is supported?
 
-Thunderbird 152.* through 155.*. Windows only.
+Thunderbird 152.* through 156.*. Windows only.
 
 ## Does it replace Thunderbird's native tray icon?
 
