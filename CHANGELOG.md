@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Thunderbird 157 compatibility: raised `strict_max_version` to `157.*`. Source-level review of the Thunderbird 157.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs` and the Windows-specific preference list in `MailGlue.sys.mjs` (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) are unchanged. `MessengerContentHandler.sys.mjs` gained a new `#handleFelt()` call at the start of command-line handling, but it's a no-op outside enterprise-only Firefox builds (`Services.felt` doesn't exist on standard Thunderbird) and the `-MapiStartup`/`-url` flag handling TN Tray's boot detection depends on is unchanged. No code changes were needed.
+
 ## 1.0.3
 
 - Thunderbird 156 compatibility: raised `strict_max_version` to `156.*`. Source-level review of the Thunderbird 156.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs`, the `-MapiStartup`/`-url` launch-flag handling, and the Windows-specific preference list (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) are all unchanged from 154/155. The release notes list a fix for Thunderbird's own native tray icon (Enter key not restoring the window), but that's Thunderbird's own tray icon, which TN Tray suppresses in favor of its own — not something TN Tray depends on. No code changes were needed.
