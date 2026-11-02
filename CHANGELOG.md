@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- Thunderbird 159 compatibility: raised `strict_max_version` to `159.*`. Source-level review of the Thunderbird 159.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs` is unchanged, the `-MapiStartup`/`-url` launch-flag handling in `MessengerContentHandler.sys.mjs` is unchanged, and the Windows tray preferences (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) keep the same names and defaults. The new unread indicator on the tray icon in 159.0 is Linux-only. No code changes were needed.
+
 ## 1.0.5
 
 - Thunderbird 158 compatibility: raised `strict_max_version` to `158.*`. Source-level review of the Thunderbird 158.0 release confirmed no changes relevant to TN Tray — `closeToTray.mjs`, the `-MapiStartup`/`-url` launch-flag handling in `MessengerContentHandler.sys.mjs`, and `MailGlue.sys.mjs` (including the Windows-specific preference list `mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) are all unchanged from 157. No code changes were needed.
