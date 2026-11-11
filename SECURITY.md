@@ -2,7 +2,9 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in TN Tray, please report it privately by opening a [GitHub Issue](https://github.com/thiagonaalmeida/tn-tray/issues) marked as a security concern, or by contacting the maintainer directly rather than disclosing it publicly first.
+If you discover a security vulnerability in TN Tray, please report it privately through GitHub: open the repository's **Security** tab and click **Report a vulnerability** ([direct link](https://github.com/thiagonaalmeida/tn-tray/security/advisories/new)). Only the maintainer can see the report.
+
+Please do not open a public Issue for security vulnerabilities, and do not disclose them publicly before a fix is available.
 
 Please include:
 
