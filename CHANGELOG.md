@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.8
+
+- Added **Show count on the tray icon**, disabled by default. It displays the same count as Thunderbird's taskbar badge. Turn it off to keep the dot indicator.
+- Added a choice between **New messages** and **Unread messages**. This changes Thunderbird's own `mail.biff.use_new_count_in_badge` setting for the current profile and also affects Thunderbird's taskbar badge. Restart Thunderbird after changing it so the total initializes correctly. New-message counts can reset when the new-mail notification is cleared, even if unread messages remain.
+- Thunderbird's taskbar badge is reapplied when restoring its window from the tray.
+- Fixed Restore when the window is minimized on the taskbar.
+- Automatic Windows startup handling now preserves a shared startup entry belonging to another Thunderbird installation. Explicitly changing the startup option can still replace or remove the shared entry.
+- Extended the compatibility range to **Thunderbird 152–162** on Windows. Source review and runtime checks used Thunderbird **161.0b4**; the 162 ceiling is a compatibility allowance, not a claim of testing on 162.
+
+Validation included 137 automated tests, runtime checks on Thunderbird 161.0b4, and daily-use testing of the approved build. The final package differs from that build only in its version number.
+
+High counts (10, 99, 99+) were checked in images at the tray's actual size. If you find the number difficult to read, please [open an issue](https://github.com/thiagonaalmeida/tn-tray/issues).
+
 ## 1.0.7
 
 - Thunderbird 160 compatibility: raised `strict_max_version` to `160.*`. Source-level review of the Thunderbird 160.0 release confirmed no changes requiring adaptation in TN Tray — `closeToTray.mjs` is unchanged, the `-MapiStartup`/`-url` launch-flag handling in `MessengerContentHandler.sys.mjs` is unchanged, and the Windows tray preferences (`mail.biff.show_tray_icon`, `mail.closeToTray`, `mail.closeToTray.startInTray`) keep the same names and defaults. The Windows tray unread-count update in 160.0 applies to Thunderbird's native tray icon, which TN Tray keeps hidden by default; it restores the same behavior as Thunderbird 152–158. No code changes were needed.
