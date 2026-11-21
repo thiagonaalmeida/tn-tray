@@ -11,16 +11,16 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 - Silent start in tray when launched from Windows Startup, without the window flashing on screen first. Launching manually (Start menu, desktop shortcut, double-click) still opens normally.
 - Custom tray icon and menu, built directly on the Win32 API (`Shell_NotifyIcon`), with Restore / Compose new message / Check for new messages / Exit.
 - Unread badge on the tray icon, mirroring Thunderbird's own new-mail icon.
-- Optional numeric tray badge, off by default, using the same count as Thunderbird's taskbar badge; turn it off to keep the dot indicator.
-- Choose new-message or unread-message counting through Thunderbird's own profile setting; the choice also affects its taskbar badge and requires a restart.
+- Optional numeric count on the tray icon (off by default), using the same count as Thunderbird's taskbar badge, with a choice of new or unread messages.
 - Auto-start with Windows, managed through the registry `Run` key (no shortcut needed).
 - Self-healing: automatically detects and recovers if `explorer.exe` restarts and wipes the notification area.
 - Includes English and Portuguese localization for the settings page, tray menu, and unread-count tooltip, matching Thunderbird's own UI language.
 
 ## Compatibility
 
-- Thunderbird **152.*** through **162.***.
+- Thunderbird **152** or later.
 - Windows only.
+- Each new Thunderbird version is reviewed during its beta; if it requires changes, a new TN Tray version is published.
 
 ## Known limitations
 
@@ -29,7 +29,7 @@ There are other tray extensions for Thunderbird out there, but none of them quit
 
 ## Why not just use Thunderbird's built-in tray support?
 
-Thunderbird had a legacy `mail.minimizeToTray` preference, and as of **Thunderbird 154** it has a proper native "close to tray" / "start in tray" feature — but the native tray icon's menu still only offers "Exit", with no restore, compose, or check-for-mail commands. TN Tray keeps covering that gap: on Thunderbird 154+, when TN Tray's own tray icon is enabled (the default), it also disables the native close-to-tray/start-in-tray preferences so the two don't both react to the same close event — you get TN Tray's full menu and optional numeric badge instead. You can turn this off in Preferences if you'd rather use Thunderbird's native behavior alongside, or instead of, TN Tray's.
+Thunderbird had a legacy `mail.minimizeToTray` preference, and as of **Thunderbird 154** it has a proper native "close to tray" / "start in tray" feature — but the native tray icon's menu still only offers "Exit", with no restore, compose, check-for-mail, or unread badge. TN Tray keeps covering that gap: on Thunderbird 154+, when TN Tray's own tray icon is enabled (the default), it also disables the native close-to-tray/start-in-tray preferences so the two don't both react to the same close event — you get TN Tray's full menu and badge instead. You can turn this off in Preferences if you'd rather use Thunderbird's native behavior alongside, or instead of, TN Tray's.
 
 ## Installation
 
@@ -70,9 +70,7 @@ Open the extension's preferences (Add-ons and Themes → TN Tray → Preferences
 - Count type: follows the current Thunderbird profile setting
 - Diagnostic logging: **disabled**
 
-Installing TN Tray immediately suppresses Thunderbird's native tray icon and adds an entry to the Windows `Run` registry key for the current user unless an entry belongs to another Thunderbird executable — both can be turned off in Preferences right after installing, if that's not what you want.
-
-High counts (10, 99, 99+) were checked in images at the tray's actual size. If the number is difficult to read, please [open an issue](../../issues).
+Installing TN Tray immediately suppresses Thunderbird's native tray icon and adds an entry to the Windows `Run` registry key for the current user — both can be turned off in Preferences right after installing, if that's not what you want.
 
 ## Privacy
 

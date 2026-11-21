@@ -6,7 +6,7 @@ It adds a custom system tray icon for Thunderbird on Windows, with close-to-tray
 
 ## Which Thunderbird version is supported?
 
-Thunderbird 152.* through 162.*. Windows only.
+Thunderbird 152 or later. Windows only. Each new Thunderbird version is reviewed during its beta; if it requires changes, a new TN Tray version is published.
 
 ## Does it replace Thunderbird's native tray icon?
 
@@ -14,7 +14,7 @@ Yes, by default. TN Tray suppresses Thunderbird's native tray icon (which only e
 
 ## Does it conflict with Thunderbird 154's native close-to-tray feature?
 
-No. TN Tray also supports Thunderbird 154. When TN Tray's own tray icon is enabled (the default), it automatically disables Thunderbird's native `mail.closeToTray` / `mail.closeToTray.startInTray` preferences on 154+, so the two don't both react to the same window-close event. You still get TN Tray's full right-click menu (Restore, Compose, Check for new messages, Exit) and optional numeric badge. If you'd rather use Thunderbird's native behavior instead, you can disable "Use only this extension's tray icon" in Preferences.
+No. Starting with this release, TN Tray also supports Thunderbird 154. When TN Tray's own tray icon is enabled (the default), it automatically disables Thunderbird's native `mail.closeToTray` / `mail.closeToTray.startInTray` preferences on 154+, so the two don't both react to the same window-close event. You still get TN Tray's full right-click menu (Restore, Compose, Check for new messages, Exit) and unread badge, which the native feature doesn't offer. If you'd rather use Thunderbird's native behavior instead, you can disable "Use only this extension's tray icon" in Preferences.
 
 ## Why is it distributed on GitHub instead of addons.thunderbird.net?
 
@@ -31,10 +31,6 @@ Enable **Show count on the tray icon** in Preferences. It is off by default and 
 ## What does Thunderbird count type change?
 
 **New messages** and **Unread messages** change Thunderbird's own `mail.biff.use_new_count_in_badge` setting for this profile, including its taskbar badge. Restart Thunderbird after changing it so the total initializes correctly. New-message counts can reset when the new-mail notification is cleared, even if unread messages remain. Unread-message counts decrease when an unread message is read, marked as read, or deleted, within the folders Thunderbird includes.
-
-## Can Windows auto-start affect another Thunderbird installation?
-
-The Windows Run entry is shared by the current Windows user. Automatic handling preserves an entry for another Thunderbird executable. Explicitly changing **Start Thunderbird with Windows** can replace or remove it; profiles using the same executable still share it.
 
 ## Where should I report problems?
 

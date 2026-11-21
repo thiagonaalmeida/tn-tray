@@ -2,13 +2,12 @@
 
 ## 1.0.8
 
-- Added an optional numeric tray badge, off by default, with the same count as Thunderbird's taskbar badge; turning it off returns to the dot indicator.
-- Added a choice between new-message and unread-message counting. This changes Thunderbird's own setting for the profile, also affects its taskbar badge, and requires a restart.
+- Optional numeric count on the tray icon (off by default), using the same count as Thunderbird's taskbar badge. Turning it off keeps the dot indicator.
+- Choice between new-message and unread-message counting. This changes Thunderbird's own `mail.biff.use_new_count_in_badge` setting for the profile, also affects its taskbar badge, and requires a restart.
 - Thunderbird's taskbar badge is reapplied when restoring the window from the tray.
 - Fixed Restore when the window is minimized on the taskbar.
-- Automatic Windows startup handling preserves a shared Run entry belonging to another Thunderbird executable; explicit option changes can still replace or remove it.
-- Extended compatibility to Thunderbird 152–162 (`strict_max_version` `162.*`); source review and runtime checks used 161.0b4, with no claim of testing on 162.
-- Validated with 137 automated tests and daily use; high-count images (10, 99, 99+) checked at actual tray size. Readability feedback is welcome in Issues.
+- Windows auto-start no longer replaces or removes a Run entry belonging to another Thunderbird installation unless the option is changed explicitly.
+- Thunderbird 161 compatibility. Source-level review of Thunderbird 161 (161.0b4) found no changes requiring adaptation in TN Tray.
 
 ## 1.0.7
 
