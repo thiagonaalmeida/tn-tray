@@ -2,16 +2,13 @@
 
 ## 1.0.8
 
-- Added **Show count on the tray icon**, disabled by default. It displays the same count as Thunderbird's taskbar badge. Turn it off to keep the dot indicator.
-- Added a choice between **New messages** and **Unread messages**. This changes Thunderbird's own `mail.biff.use_new_count_in_badge` setting for the current profile and also affects Thunderbird's taskbar badge. Restart Thunderbird after changing it so the total initializes correctly. New-message counts can reset when the new-mail notification is cleared, even if unread messages remain.
-- Thunderbird's taskbar badge is reapplied when restoring its window from the tray.
+- Added an optional numeric tray badge, off by default, with the same count as Thunderbird's taskbar badge; turning it off returns to the dot indicator.
+- Added a choice between new-message and unread-message counting. This changes Thunderbird's own setting for the profile, also affects its taskbar badge, and requires a restart.
+- Thunderbird's taskbar badge is reapplied when restoring the window from the tray.
 - Fixed Restore when the window is minimized on the taskbar.
-- Automatic Windows startup handling now preserves a shared startup entry belonging to another Thunderbird installation. Explicitly changing the startup option can still replace or remove the shared entry.
-- Extended the compatibility range to **Thunderbird 152–162** on Windows. Source review and runtime checks used Thunderbird **161.0b4**; the 162 ceiling is a compatibility allowance, not a claim of testing on 162.
-
-Validation included 137 automated tests, runtime checks on Thunderbird 161.0b4, and daily-use testing of the approved build. The final package differs from that build only in its version number.
-
-High counts (10, 99, 99+) were checked in images at the tray's actual size. If you find the number difficult to read, please [open an issue](https://github.com/thiagonaalmeida/tn-tray/issues).
+- Automatic Windows startup handling preserves a shared Run entry belonging to another Thunderbird executable; explicit option changes can still replace or remove it.
+- Extended compatibility to Thunderbird 152–162 (`strict_max_version` `162.*`); source review and runtime checks used 161.0b4, with no claim of testing on 162.
+- Validated with 137 automated tests and daily use; high-count images (10, 99, 99+) checked at actual tray size. Readability feedback is welcome in Issues.
 
 ## 1.0.7
 

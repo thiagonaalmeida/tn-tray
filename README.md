@@ -1,7 +1,8 @@
 # TN Tray
 
-**TN Tray** is a Thunderbird extension for Windows with close-to-tray and start-in-tray behavior, a custom tray icon, an optional numeric count, and a right-click menu.
+**TN Tray** is a Thunderbird extension for Windows that gives you full control over minimize/close-to-tray behavior, with a custom tray icon, unread badge, and its own right-click menu — something Thunderbird's native tray integration has never fully provided.
 
+There are other tray extensions for Thunderbird out there, but none of them quite matched what felt missing, or worked the way it seemed like they should. TN Tray is an independent take on the problem, built from scratch.
 > This repository hosts public releases, documentation, support, issues, and discussions. The extension is distributed as a packaged `.xpi` file through GitHub Releases.
 
 ## Features
@@ -9,8 +10,9 @@
 - Close to tray: clicking the window's X sends Thunderbird to the system tray instead of quitting.
 - Silent start in tray when launched from Windows Startup, without the window flashing on screen first. Launching manually (Start menu, desktop shortcut, double-click) still opens normally.
 - Custom tray icon and menu, built directly on the Win32 API (`Shell_NotifyIcon`), with Restore / Compose new message / Check for new messages / Exit.
-- Dot indicator for new mail, with an optional numeric tray badge (off by default) using the same count as Thunderbird's taskbar badge.
-- Choose new-message or unread-message counting through Thunderbird's profile setting; the choice also affects its taskbar badge and requires a restart.
+- Unread badge on the tray icon, mirroring Thunderbird's own new-mail icon.
+- Optional numeric tray badge, off by default, using the same count as Thunderbird's taskbar badge; turn it off to keep the dot indicator.
+- Choose new-message or unread-message counting through Thunderbird's own profile setting; the choice also affects its taskbar badge and requires a restart.
 - Auto-start with Windows, managed through the registry `Run` key (no shortcut needed).
 - Self-healing: automatically detects and recovers if `explorer.exe` restarts and wipes the notification area.
 - Includes English and Portuguese localization for the settings page, tray menu, and unread-count tooltip, matching Thunderbird's own UI language.
@@ -19,16 +21,15 @@
 
 - Thunderbird **152.*** through **162.***.
 - Windows only.
-- Source review and runtime checks used Thunderbird **161.0b4**. The 162 ceiling is a compatibility allowance; 162 has not been tested.
 
 ## Known limitations
 
 - TN Tray currently manages the main Thunderbird window opened at startup. Additional 3-pane windows opened during the same session aren't independently managed by the close-to-tray behavior.
-- Windows auto-start uses a single registry entry per Windows user. Automatic startup handling preserves an entry belonging to another Thunderbird executable. Explicitly changing the startup option can replace or remove that shared entry; profiles using the same executable still share it.
+- Windows auto-start uses a single registry entry per Windows user. Automatic handling preserves an entry belonging to another Thunderbird executable. Explicitly changing the Windows auto-start option can replace or remove the shared entry; profiles using the same executable still share it.
 
-## Thunderbird's native tray settings
+## Why not just use Thunderbird's built-in tray support?
 
-On Thunderbird 154+, enabling **Use only this extension's tray icon** (the default) backs up and disables the native close-to-tray/start-in-tray preferences so both handlers do not process the same close event. You can turn the option off in Preferences to use the native behavior alongside TN Tray. The backed-up preferences are restored when the extension is disabled or uninstalled.
+Thunderbird had a legacy `mail.minimizeToTray` preference, and as of **Thunderbird 154** it has a proper native "close to tray" / "start in tray" feature — but the native tray icon's menu still only offers "Exit", with no restore, compose, or check-for-mail commands. TN Tray keeps covering that gap: on Thunderbird 154+, when TN Tray's own tray icon is enabled (the default), it also disables the native close-to-tray/start-in-tray preferences so the two don't both react to the same close event — you get TN Tray's full menu and optional numeric badge instead. You can turn this off in Preferences if you'd rather use Thunderbird's native behavior alongside, or instead of, TN Tray's.
 
 ## Installation
 
@@ -54,8 +55,8 @@ addons.thunderbird.net is currently not accepting new add-ons using Experiment A
 Open the extension's preferences (Add-ons and Themes → TN Tray → Preferences) to control:
 
 - Use only this extension's tray icon (suppresses Thunderbird's native one)
-- Show count on the tray icon (off by default; otherwise a dot is used)
-- Thunderbird count type: New messages or Unread messages (a profile setting shared with the taskbar badge; restart after changing)
+- Show count on the tray icon (off by default)
+- Thunderbird count type: New messages or Unread messages (also affects the taskbar badge; restart Thunderbird after changing)
 - Start Thunderbird with Windows
 - Start minimized in the tray on boot
 - Enable diagnostic logging (writes to `%TEMP%\tntray-debug.log`, off by default), with a "Show log file" button to open its location directly in Explorer
@@ -69,7 +70,7 @@ Open the extension's preferences (Add-ons and Themes → TN Tray → Preferences
 - Count type: follows the current Thunderbird profile setting
 - Diagnostic logging: **disabled**
 
-Installing TN Tray suppresses Thunderbird's native tray icon and enables Windows startup by default. Automatic startup handling preserves an existing entry for another Thunderbird executable. You can change these options in Preferences.
+Installing TN Tray immediately suppresses Thunderbird's native tray icon and adds an entry to the Windows `Run` registry key for the current user unless an entry belongs to another Thunderbird executable — both can be turned off in Preferences right after installing, if that's not what you want.
 
 High counts (10, 99, 99+) were checked in images at the tray's actual size. If the number is difficult to read, please [open an issue](../../issues).
 
