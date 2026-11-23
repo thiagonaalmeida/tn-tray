@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.9
+
+- Thunderbird 152 or later. The maximum version was removed. Each new Thunderbird version is reviewed during its beta; if it requires changes, a new TN Tray version is published.
+- No code changes.
+
 ## 1.0.8
 
 - Optional numeric count on the tray icon (off by default), using the same count as Thunderbird's taskbar badge. Turning it off keeps the dot indicator.
