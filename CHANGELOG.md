@@ -1,6 +1,6 @@
 # Changelog
 
-### 1.0.9
+## 1.0.9
 
 - Thunderbird 152 or later. The maximum version was removed. Each new Thunderbird version is reviewed during its beta; if it requires changes, a new TN Tray version is published.
 - No code changes.
